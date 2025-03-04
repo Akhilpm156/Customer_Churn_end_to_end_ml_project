@@ -1,0 +1,17 @@
+scikit-learn
+pandas 
+gdown
+dvc
+dagshub
+mlflow
+numpy
+matplotlib
+seaborn
+python-box
+pyYAML
+tqdm
+ensure
+joblib
+Flask
+Flask-Cors
+-e .

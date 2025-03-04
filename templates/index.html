@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Churn Prediction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="number"], input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Churn Prediction</h1>
+        <form action="/predict" method="POST">
+            <label for="Geography_Germany">Geography (Germany)</label>
+            <input type="number" name="Geography_Germany" id="Geography_Germany" placeholder="Enter 0 or 1" required>
+
+            <label for="Geography_Spain">Geography (Spain)</label>
+            <input type="number" name="Geography_Spain" id="Geography_Spain" placeholder="Enter 0 or 1" required>
+
+            <label for="Gender_Male">Gender (Male)</label>
+            <input type="number" name="Gender_Male" id="Gender_Male" placeholder="Enter 0 or 1" required>
+
+            <label for="Card_Type_GOLD">Card Type (GOLD)</label>
+            <input type="number" name="Card_Type_GOLD" id="Card_Type_GOLD" placeholder="Enter 0 or 1" required>
+
+            <label for="Card_Type_PLATINUM">Card Type (PLATINUM)</label>
+            <input type="number" name="Card_Type_PLATINUM" id="Card_Type_PLATINUM" placeholder="Enter 0 or 1" required>
+
+            <label for="Card_Type_SILVER">Card Type (SILVER)</label>
+            <input type="number" name="Card_Type_SILVER" id="Card_Type_SILVER" placeholder="Enter 0 or 1" required>
+
+            <label for="CreditScore">Credit Score</label>
+            <input type="number" name="CreditScore" id="CreditScore" placeholder="Enter Credit Score" required>
+
+            <label for="Age">Age</label>
+            <input type="number" name="Age" id="Age" placeholder="Enter Age" required>
+
+            <label for="Tenure">Tenure</label>
+            <input type="number" name="Tenure" id="Tenure" placeholder="Enter Tenure" required>
+
+            <label for="Balance">Balance</label>
+            <input type="number" name="Balance" id="Balance" placeholder="Enter Balance" required>
+
+            <label for="NumOfProducts">Number of Products</label>
+            <input type="number" name="NumOfProducts" id="NumOfProducts" placeholder="Enter Number of Products" required>
+
+            <label for="HasCrCard">Has Credit Card</label>
+            <input type="number" name="HasCrCard" id="HasCrCard" placeholder="Enter 0 or 1" required>
+
+            <label for="IsActiveMember">Is Active Member</label>
+            <input type="number" name="IsActiveMember" id="IsActiveMember" placeholder="Enter 0 or 1" required>
+
+            <label for="EstimatedSalary">Estimated Salary</label>
+            <input type="number" name="EstimatedSalary" id="EstimatedSalary" placeholder="Enter Estimated Salary" required>
+
+            <label for="Complain">Complain</label>
+            <input type="number" name="Complain" id="Complain" placeholder="Enter 0 or 1" required>
+
+            <label for="SatisfactionScore">Satisfaction Score</label>
+            <input type="number" name="SatisfactionScore" id="SatisfactionScore" placeholder="Enter Satisfaction Score" required>
+
+            <label for="PointEarned">Points Earned</label>
+            <input type="number" name="PointEarned" id="PointEarned" placeholder="Enter Points Earned" required>
+
+            <input type="submit" value="Predict">
+        </form>
+
+        <div class="result">
+            <h2>Prediction Result:</h2>
+            <p><strong>{{ prediction }}</strong></p>
+        </div>
+    </div>
+</body>
+</html>
