@@ -17,7 +17,7 @@ Data_Transformation:
 
 
 Model_Trainer:
-  root_dir: artifacts/model_trainer
+  root_dir: model
   train_data_path: artifacts/data_transformation/train.csv
   test_data_path: artifacts/data_transformation/test.csv
   model_name: DecisionTreeClassifier.joblib
@@ -25,5 +25,5 @@ Model_Trainer:
 Model_Evaluation:
   root_dir: artifacts/model_evaluation
   test_data_path: artifacts/data_transformation/test.csv
-  model_path: artifacts/model_trainer/model.joblib
+  model_path: model/DecisionTreeClassifier.joblib
   metric_file_name: artifacts/model_evaluation/metrics.json

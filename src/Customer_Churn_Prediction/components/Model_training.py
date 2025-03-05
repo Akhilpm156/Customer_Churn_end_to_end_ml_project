@@ -26,14 +26,14 @@ class ModelTrainer:
 
         joblib.dump(dtree, os.path.join(self.config.root_dir, self.config.model_name))
 
-        # Now move the model to the `model` directory outside the `src` folder
-        final_model_path = os.path.join("model", "model.joblib")  # Save model to the 'model' folder
+        # directory outside the `src` folder
+        #final_model_path = os.path.join("model", "model.joblib") 
 
         # Create directories if they do not exist
-        if not os.path.exists(os.path.dirname(final_model_path)):
-            os.makedirs(os.path.dirname(final_model_path))
-            print(f"✅ Folder Created: {os.path.dirname(final_model_path)}")
+        #if not os.path.exists(os.path.dirname(final_model_path)):
+         #   os.makedirs(os.path.dirname(final_model_path))
+         #   print(f"Folder Created: {os.path.dirname(final_model_path)}")
 
-        # Move the model to final destination
-        joblib.dump(dtree, final_model_path)
-        print(f"✅ Model Moved to: {final_model_path}")
+        # Save the model to final destination
+        #joblib.dump(dtree, final_model_path)
+        #print(f"Model Moved to: {final_model_path}")
