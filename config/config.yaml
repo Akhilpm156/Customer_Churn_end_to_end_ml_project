@@ -27,3 +27,4 @@ Model_Evaluation:
   test_data_path: artifacts/data_transformation/test.csv
   model_path: model/DecisionTreeClassifier.joblib
   metric_file_name: artifacts/model_evaluation/metrics.json
+  
