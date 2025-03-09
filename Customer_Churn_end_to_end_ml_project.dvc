@@ -1,5 +1,0 @@
-outs:
-    - md5: 6a3bab8d0dc377510e19cd0f6f960f62.dir
-      size: 5030
-      path: Customer_Churn_end_to_end_ml_project
-      nfiles: 11
