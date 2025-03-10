@@ -41,7 +41,6 @@ def index():
             SatisfactionScore = int(request.form.get('SatisfactionScore'))
             PointEarned = int(request.form.get('PointEarned'))
 
-
             # Prepare the data for prediction
             data = [Geography_Germany, Geography_Spain, Gender_Male, Card_Type_GOLD, Card_Type_PLATINUM, Card_Type_SILVER,
                     CreditScore, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary, 
