@@ -28,7 +28,7 @@ class ModelEvaluationPipeline:
         model_evaluation.save_results()
 
         # Log results into MLflow
-        model_evaluation.log_into_mlflow()
+        #model_evaluation.log_into_mlflow()
 
     except Exception as e:
         print(f"An error occurred: {e}")
